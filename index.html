@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #myCanvas {
+                border: 2px solid black;
+            }
+        </style>
+        <title>Canvas</title>
+        <meta charset="utf-8"/>
+        <script>
+            var canvas, ctx;
+            function init() {
+                canvas = document.getElementById('myCanvas');
+                ctx=canvas.getContext('2d');
+                drawPoint();
+            }
+            function drawPoint() {
+                ctx.fillStyle='#000000';
+                ctx.fillRect(Math.random() * 650,Math.random() * 650,2,2);
+            }
+        </script>
+    </head>
+    <body onload="init();">
+    <canvas id="myCanvas" width="650" height="650">
+    </canvas>
+    </body>
+</html>
