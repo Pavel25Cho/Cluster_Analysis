@@ -86,13 +86,13 @@ function recolor (){
         keys[i].x = sumX/pointCount;
         keys[i].y = sumY/pointCount;
     }
-    console.log(Done +" - "+keys.length)
     if (Done == keys.length) {
         console.log("DONE");
         $("#message")[0].innerHTML = 'Clustering was completed in ' + iterations + ' iterations';
     }
     else {
         sleep(300).then(() => {
+            $("#message")[0].innerHTML = 'Done '+ Done + ' / ' + keys.length + ' clusters';
             color();
             recolor();
         } )
