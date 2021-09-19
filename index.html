@@ -1,28 +1,27 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <style>
-            #myCanvas {
-                border: 2px solid black;
-            }
-        </style>
-        <title>Canvas</title>
-        <meta charset="utf-8"/>
-        <script>
-            var canvas, ctx;
-            function init() {
-                canvas = document.getElementById('myCanvas');
-                ctx=canvas.getContext('2d');
-                drawPoint();
-            }
-            function drawPoint() {
-                ctx.fillStyle='#000000';
-                ctx.fillRect(Math.random() * 650,Math.random() * 650,2,2);
-            }
-        </script>
-    </head>
-    <body onload="init();">
+<head>
+    <style>
+        #myCanvas {
+            border: 2px solid black;
+        }
+    </style>
+    <title>Canvas</title>
+    <meta charset="utf-8"/>
+</head>
+<body>
     <canvas id="myCanvas" width="650" height="650">
     </canvas>
-    </body>
-</html>
+    <div style=" margin-top: 5px"/>
+    <input id="points" type="number" name="points" style="width: 200px"/>
+    <input id="place" name="place" type="button" value="Place points"/>
+    <input id="make" name="make" type="button" value="Make clusters"/>
+</body>
+<body>
+    <div style=" margin-top: 5px"/>
+    <input id="x" type="number" name="points" style="width: 70px"/>
+    <input id="y" type="number" name="points" style="width: 70px"/>
+    <input id="push" name="push" type="button" value="Add"/>
+    <input id="rnd" name="push" type="button" value="Random"/>
+    <div name="message" id="message" style="font-size: large; margin-top: 5px"/>
+</body>
+<script src="jquery.js"></script>
+<script src="place_points.js"></script>
